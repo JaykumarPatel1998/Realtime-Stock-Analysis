@@ -1,9 +1,5 @@
 # Real-Time Trade Analytics Dashboard
 
-## Group Members:
-1. Jaykumar Patel (N01540305)
-2. Aditya Negandhi (N01582989)
-
 ---
 
 ## Q1. Introduction and Background
@@ -69,3 +65,10 @@ The primary objective of this project is to learn how to handle, analyze, and vi
    - **X-axis:** Timestamp (`t`)
    - **Y-axis:** Cumulative volume (`v`)
    - Shows how the total trade volume evolves over time.
+
+## Data Collection Architecture
+![image](https://github.com/user-attachments/assets/03020c7f-7cc2-4aa9-b8ae-dee440f170c2)
+
+## Dashboard
+![image](https://github.com/user-attachments/assets/0b68d7bc-e14b-4507-b24f-1521096742e0)
+
