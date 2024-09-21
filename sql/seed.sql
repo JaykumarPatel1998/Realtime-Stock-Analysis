@@ -1,0 +1,57 @@
+CREATE TABLE trade_conditions (
+    code INT PRIMARY KEY,
+    name VARCHAR(255)
+);
+
+CREATE TABLE trades (
+    message_type VARCHAR(255),
+    symbol VARCHAR(255),
+    last_price DECIMAL(10, 2),
+    timestamp TIMESTAMP,
+    volume INT,
+    trade_condition INT,
+    FOREIGN KEY (trade_condition) REFERENCES trade_conditions(code)
+);
+
+INSERT INTO trade_conditions (code, name) VALUES
+(1, 'Regular'),
+(2, 'Acquisition'),
+(3, 'Average Price Trade'),
+(4, 'Bunched'),
+(5, 'Cash Sale'),
+(6, 'Distribution'),
+(7, 'Automatic Execution'),
+(8, 'Intermarket Sweep Order'),
+(9, 'Bunched Sold'),
+(10, 'Price Variation Trade'),
+(11, 'Cap Election'),
+(12, 'Odd Lot Trade'),
+(13, 'Rule 127'),
+(14, 'Rule 155'),
+(15, 'Sold last'),
+(16, 'Market Center Official Close'),
+(17, 'Next day'),
+(18, 'Market Center Opening Trade'),
+(19, 'Opening Prints'),
+(20, 'Market Center Official Open'),
+(21, 'Prior Reference Price'),
+(22, 'Seller'),
+(23, 'Split Trade'),
+(24, 'Form-T Trade'),
+(25, 'Extended Hours (Sold Out of Sequence)'),
+(26, 'Contingent Trade'),
+(27, 'Stock Option Trade'),
+(28, 'Cross Trade'),
+(29, 'Yellow Flag'),
+(30, 'Sold (Out of Sequence)'),
+(31, 'Stopped Stock'),
+(32, 'Derivatively Priced'),
+(33, 'Market Center Re-opening Trade'),
+(34, 'Re-opening Prints'),
+(35, 'Market Center Closing Trade'),
+(36, 'Closing Prints'),
+(37, 'Qualified Contigent Trade'),
+(38, 'Placeholder for 611 Exempt'),
+(39, 'Corrected Consolidated Close'),
+(40, 'Opened'),
+(41, 'Trade Through Exempt (TTE)');
